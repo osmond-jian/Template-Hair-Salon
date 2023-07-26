@@ -1,0 +1,175 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  font-size: 20px;
+  background-color:white;
+
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+/* Header and Navigation */
+header {
+  font-size: 10px;
+  border:solid;
+}
+
+nav {
+  border:solid;
+  border-color:red;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+
+nav * {
+  border:solid;
+  border-color: yellow;
+
+}
+
+nav h6 {
+  color:red;
+  font-weight:bold;
+  font-family:Arial, Helvetica, sans-serif;
+  background-color:whitesmoke;
+  
+}
+
+nav ul {
+  display:flex;
+  flex-flow: row wrap;
+  flex:1 0 auto;
+  justify-content: space-evenly;
+
+}
+
+nav ul li {
+  background-color:white;
+  font-weight:bold;
+  
+}
+
+nav button {
+  font-weight:bold;
+  margin:1em;
+  border-radius:20%;
+  border:none;
+}
+
+/* Section 1 */
+section.section1 {
+  border:solid;
+  border-color: green;
+  background-image:none;
+  display:flex;
+  justify-content: space-between;
+}
+
+.section1 aside {
+  border:solid;
+  display:flex;
+  background:transparent;
+  flex-flow: column nowrap;
+  justify-content:flex-start;
+}
+
+.section1 aside p {
+  color:green;
+  writing-mode: vertical-rl;
+
+}
+
+.section1FlexContainer {
+  display:flex;
+  flex-flow: column nowrap;
+  align-content:space-between;
+}
+
+.section1Offer {
+  color:white;
+  border:solid;
+  background-color:black;
+
+}
+
+/* Section 2 */
+
+section.section2 {
+  border:solid;
+  border-color:aqua;
+  display:flex;
+  justify-content:space-between;
+}
+
+/* Section 3 */
+
+section.section3 {
+  border:solid;
+  border-color:maroon;
+  display:flex;
+}
+
+/* Section 4 */
+
+section.section4 {
+  border:solid;
+  border-color:peachpuff;
+  display:flex;
+  justify-content:space-evenly;
+}
+
+/* Section 5 */
+
+section.section5 {
+  border:solid;
+  border-color:cyan;
+  display:flex;
+}
+
+
+/* Section 6 / Lookbook */
+
+section.Lookbook {
+  border:solid;
+  border-color:whitesmoke;
+  display:flex;
+}
+
+/* Footer */
+
+footer {
+
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
