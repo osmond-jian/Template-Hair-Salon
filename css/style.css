@@ -38,12 +38,10 @@ ul {
 /* Header and Navigation */
 header {
   font-size: 10px;
-  border:solid;
+  padding:2% 0;
 }
 
 nav {
-  border:solid;
-  border-color:red;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
@@ -75,6 +73,7 @@ nav ul {
 nav ul li {
   background-color:white;
   font-weight:bold;
+  font-size:1rem;
   
 }
 
@@ -86,16 +85,19 @@ nav button {
 }
 
 /* Section 1 */
-section.section1 {
-  border:solid;
-  border-color: green;
-  background-image:none;
+.section1 {
   display:flex;
   justify-content: space-between;
+  background-image: url("../img/salon.jpg");
+  background-position:center;
+  background-size:cover;
+  width:100%;
+  height:100%;
+  padding:10% 0 10% 10%;
 }
 
 .section1 aside {
-  border:solid;
+  border:none;
   display:flex;
   background:transparent;
   flex-flow: column nowrap;
@@ -103,7 +105,7 @@ section.section1 {
 }
 
 .section1 aside p {
-  color:green;
+  color:black;
   writing-mode: vertical-rl;
 
 }
@@ -114,38 +116,101 @@ section.section1 {
   align-content:space-between;
 }
 
+.section1FlexContainer > * {
+  padding: 5% 0;
+  font-size:1em;
+}
+
+.section1FlexContainer > h1 {
+  font-size:3em;
+}
+
+.section1FlexContainer > button {
+  text-align:center;
+  width:50%;
+  margin:10% 0;
+}
+
 .section1Offer {
   color:white;
-  border:solid;
   background-color:black;
+  padding-left: 5%;
 
 }
 
 /* Section 2 */
 
-section.section2 {
-  border:solid;
-  border-color:aqua;
+.section2 {
+  padding: 8% 1%;
   display:flex;
   justify-content:space-between;
 }
 
+.section2 img {
+  width:25%;
+  
+}
+
+.section2 div {
+  text-align:center;
+  margin:0 auto;
+  padding:2% 5%;
+  width:33%
+}
 /* Section 3 */
 
-section.section3 {
-  border:solid;
-  border-color:maroon;
+.section3 {
+  background-color:lightgrey;
+  padding: 10% 15%;
+}
+
+.whiteBox {
+  background-color:white;
+  padding:5% 5%;
   display:flex;
+}
+
+.whiteBox > div:first-child {
+  width:50%;
+  padding-right:5%;
+}
+
+.blogImage {
+  width:50%;
+  display:flex;
+  align-items:center;
+}
+
+.section3 img {
+  width:100%;
 }
 
 /* Section 4 */
 
-section.section4 {
+.section4 {
   border:solid;
   border-color:peachpuff;
+  height:100%;
+  padding:10% 5%;
   display:flex;
   justify-content:space-evenly;
 }
+
+.portrait {
+  width:33%;
+  display:flex;
+  flex-flow: column nowrap;
+  justify-content:center;
+  text-align:center;
+  align-items:center;
+}
+
+.portrait img {
+  width:50%;
+  border-radius:10%;
+}
+
+
 
 /* Section 5 */
 
