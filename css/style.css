@@ -35,6 +35,13 @@ ul {
   list-style-type: none;
 }
 
+.slideshowMatch {
+  background:linear-gradient(to right, #cf738c, #E7d8dd);
+}
+
+.currentSlide {
+  background-color:grey !important;
+}
 
 /******************************************
 /* LAYOUT
@@ -42,27 +49,27 @@ ul {
 /* Header and Navigation */
 header {
   font-size: 10px;
-  padding:2% 0;
+  padding:1% 0;
+  border-bottom:solid;
 }
 
 nav {
+  background-color: white;
   display:flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
-}
-
-nav * {
-  border:solid;
-  border-color: yellow;
-
+  align-items: center;
+  padding: 1% 2%
+  
 }
 
 nav h6 {
   color:red;
   font-weight:bold;
   font-family:Arial, Helvetica, sans-serif;
-  background-color:whitesmoke;
+  background-color:lightblue;
+  font-size:2em;
+  border-radius:10%;
   
 }
 
@@ -77,22 +84,42 @@ nav ul {
 nav ul li {
   background-color:white;
   font-weight:bold;
-  font-size:1rem;
+  font-size:1.5rem;
+  padding:2%;
+  border-radius:5%;
   
+}
+
+/* Change color when mouse hovers over */
+
+nav ul li:hover {
+  background-color:#eb6464;
+}
+
+nav ul li a {
+  font-weight:bold;
+  font-size:1.5rem;
+  text-decoration:none;
+  color:black;
+  margin:0px;
+  width:100%;;
+  height:100%;
+  display:block;
 }
 
 nav button {
   font-weight:bold;
-  margin:1em;
+  font-size:1.5rem;
   border-radius:20%;
   border:none;
 }
 
 /* Section 1 */
 .section1 {
+  position:relative;
   display:flex;
   justify-content: space-between;
-  background-image: url("../img/salon.jpg");
+  background-image: url("../img/slideshow/salon.jpg");
   background-position:center;
   background-size:cover;
   width:100%;
@@ -142,10 +169,43 @@ nav button {
 
 }
 
+#slideshowButtons {
+  width:10%;
+  position:absolute;
+  bottom:1%;
+  right:1%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  color:black;
+  padding:2%;
+  cursor:pointer;
+
+}
+
+.prev:hover, .next:hover{
+  color:grey;
+}
+
+.dot {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
 /* Section 2 */
 
 .section2 {
-  padding: 8% 1%;
+  padding: 15% 1%;
   display:flex;
   justify-content:space-between;
 }
@@ -164,8 +224,7 @@ nav button {
 /* Section 3 */
 
 .section3 {
-  background-color:lightgrey;
-  padding: 10% 15%;
+  padding: 15% 10%;
 }
 
 .whiteBox {
@@ -195,7 +254,7 @@ nav button {
   border:solid;
   border-color:peachpuff;
   height:100%;
-  padding:10% 5%;
+  padding:15% 5%;
   display:flex;
   justify-content:space-evenly;
 }
@@ -241,9 +300,8 @@ nav button {
 /* Section 5 */
 
 .section5 {
-  background-color:pink;
   display:flex;
-  padding: 5% 10%;
+  padding: 5% 5%;
   display:flex;
   justify-content:center;
 
@@ -287,13 +345,26 @@ nav button {
 .Lookbook img {
   margin:2%;
   border-radius:5%;
+  transition: transform .2s;
+  
+}
+
+.Lookbook img:hover {
+  transform:scale(2.5);
 }
 
 
 /* Footer */
 
 footer {
+  padding: 1% 2%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
 
+footer div img {
+  width:10%;
 }
 
 /******************************************
