@@ -35,12 +35,46 @@ ul {
   list-style-type: none;
 }
 
+/* Related to Slideshow Functionality */
 .slideshowMatch {
   background:linear-gradient(to right, #cf738c, #E7d8dd);
 }
 
 .currentSlide {
   background-color:grey !important;
+}
+
+/* PhotoViewer for the LookBook Logic */
+#photoViewer {
+  display:none;
+  justify-content:center;
+  align-items:center;
+
+  background-color:grey;
+  position:fixed;
+  padding:0;
+  margin:0;
+
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+
+  width:100%;
+  height:100%;
+  z-index:99;
+
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+
+#photoviewerImage {
+  height:100%;
+  width:100%;
+}
+
+#photoViewerImage:hover {
+  overflow:auto;
 }
 
 /******************************************
@@ -279,6 +313,9 @@ nav button {
 .portrait img {
   width:50%;
   border-radius:10%;
+  border:solid;
+  border-width: 1em;
+  border-color:black;
 }
 
 .nameTag {
@@ -302,21 +339,23 @@ nav button {
 .section5 {
   display:flex;
   padding: 5% 5%;
-  display:flex;
   justify-content:center;
+
 
 }
 
 .section5 div {
   width:50%;
   padding:5%;
-  background-color:grey;
-
-
+  background:linear-gradient(to left,#C6C5CA, grey);
 }
 
 .section5 p {
   color:white;
+  font-size:2em;
+  margin-top: 10%;
+  margin-bottom:10%;
+  
 }
 
 
@@ -349,8 +388,8 @@ nav button {
   
 }
 
-.Lookbook img:hover {
-  transform:scale(2.5);
+.normalImage:hover {
+  transform:scale(1.5);
 }
 
 
@@ -363,7 +402,7 @@ footer {
   align-items:center;
 }
 
-footer div img {
+footer div a img {
   width:10%;
 }
 

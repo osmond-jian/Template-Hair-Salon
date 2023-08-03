@@ -6,7 +6,7 @@
   	<meta name="keywords" content="one, two, three">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<title>Ocean Hair Salon</title>
+		<title>Ocean Hair Salon Blog</title>
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -19,10 +19,10 @@
 				<h6>Ocean Hair Salon</h6>
 				<ul>
 					<li>
-						<a href="index.html">Home</a>
+						<a href="#home_section">Home</a>
 					</li>
 					<li>
-						<a href="#home_section">About</a>
+						<a href="about.html">About</a>
 					</li>
 					<li>
 						<a href="#services_section">Services</a>
@@ -31,7 +31,7 @@
 						<a href="#lookbook_section">LookBook</a>
 					</li>
 					<li>
-						<a href="#news_section">Blog</a>
+						<a href="#news_section">News</a>
 					</li>
 					<li>
 						<a href="booking.html">Contact</a>
@@ -58,16 +58,6 @@
 				<p>Monday-Sunday 7:00am - 8:00pm</p>
 			</aside>
 
-			<div id="slideshowButtons">
-				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-				<div id="slideshowTracker">
-					<span class="dot slide1 currentSlide" onclick="setCurrentSlide(1)"></span>
-					<span class="dot slide2" onclick="setCurrentSlide(2)"></span>
-					<span class="dot slide3" onclick="setCurrentSlide(3)"></span>
-				</div>
-				<a class="next" onclick="plusSlides(1)">&#10095;</a>
-			</div>
-
 		</section>
 <!-- Second Section with 3 icon-paragraph pairs -->
 		<section id="services_section" class="section2">
@@ -88,7 +78,7 @@
 			</div>
 		</section>
 <!-- Third Section - NEWS STORY -->
-		<section id="news_section" class="section3 slideshowMatch">
+		<section id="news_section" class="section3">
 			<div class="whiteBox">
 				<div>
 					<h4>MAKE YOUR <br>OWN MOMENTUM</h4>
@@ -127,7 +117,7 @@
 			</div>
 		</section>
 <!-- Fifth Section - Random Ad -->
-		<section class="section5 slideshowMatch">
+		<section class="section5">
 			<div>
 				<p>Colour Day Offer!</p>
 				<p><b>-10%</b> ON HAIRCUT <br>COLOR AND HIGHLIGHT</p>
@@ -140,42 +130,32 @@
 			<h5>OUR LOOKBOOK</h5>
 			<div class="Lookbook">
 				<div class="column1">
-					<img src="img/LookBook/hairstyle1.jpg" alt="Photo1" id="image1" class="normalImage" onclick="toggleEnlargeImage('image1')">
-					<img src="img/LookBook/hairstyle3.jpg" alt="Photo2" id="image2" class="normalImage" onclick="toggleEnlargeImage('image2')">
+					<img src="img/LookBook/hairstyle1.jpg" alt="Photo1">
+					<img src="img/LookBook/hairstyle3.jpg" alt="Photo2">
 				</div>
 
 				<div class="column2">
-					<img src="img/LookBook/hairstyle4.jpg" alt="Photo3" id="image3" class="normalImage" onclick="toggleEnlargeImage('image3')">
-					<img src="img/LookBook/hairstyle6.jpg" alt="Photo4" id="image4" class="normalImage" onclick="toggleEnlargeImage('image4')">
+					<img src="img/LookBook/hairstyle4.jpg" alt="Photo3">
+					<img src="img/LookBook/hairstyle6.jpg" alt="Photo4">
 				</div>
 
 				<div class="column3">
-					<img src="img/LookBook/hairstyle2.jpg" alt="Photo5" id="image5" class="normalImage" onclick="toggleEnlargeImage('image5')">
-					<img src="img/LookBook/hairstyle5.jpg" alt="Photo6" id="image6" class="normalImage" onclick="toggleEnlargeImage('image6')">
+					<img src="img/LookBook/hairstyle2.jpg" alt="Photo5">
+					<img src="img/LookBook/hairstyle5.jpg" alt="Photo6">
 				</div>
 			</div>
 		</section>
-<!-- Section 7 - The PhotoViewer -->
-		<section id="photoViewer" style="display:none">
-			<img id="photoViewerImage" src="" alt="Lookbook Photo" onclick="toggleEnlargeImage('photoViewerImage')">
-		</section>
 <!-- Footer -->
-		<footer class="slideshowMatch">
+		<footer>
 			<div>
-				<a href="https://www.facebook.com">
-					<img src="img/icons/facebook.png" alt="Facebook">
-				</a>
-				<a href="https://www.instagram.com">
-					<img src="img/icons/instagram.png" alt="Instagram">
-				</a>
-				<a href="https://www.linkedin.com">
-					<img src="img/Icons/linkedin.png" alt="Linkedin">
-				</a>
+				<img src="img/icons/facebook.png" alt="Facebook">
+				<img src="img/Icons/instagram.png" alt="Instagram">
+				<img src="img/Icons/linkedin.png" alt="Linkedin">
 			</div>
 			<p>Created by: Osmond Jian</p>
 		</footer>
 
-		<script type="text/javascript" src="js/main.js"></script>
+
 		<script type="text/javascript" src="js/view.js"></script>
 		<script type="text/javascript" src="js/controller.js"></script>
 	</body>
