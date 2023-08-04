@@ -10,7 +10,7 @@
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/styleBooking.css">
 	</head>
 	<body>
 <!-- Navigation Bar -->
@@ -22,19 +22,19 @@
 						<a href="index.html">Home</a>
 					</li>
 					<li>
-						<a href="index.html">About</a>
+						<a href="index.html#home_section">About</a>
 					</li>
 					<li>
-						<a href="#services_section">Services</a>
+						<a href="index.html#services_section">Services</a>
 					</li>
 					<li>
-						<a href="#lookbook_section">LookBook</a>
+						<a href="index.html#lookbook_section">LookBook</a>
 					</li>
 					<li>
-						<a href="#news_section">News</a>
+						<a href="blog.html">Blog</a>
 					</li>
 					<li>
-						<a href="booking.html">Contact</a>
+						<a href="#contactUs">Contact</a>
 					</li>
 				</ul>
 				<button class="bookOnline">Book Online</button>
@@ -42,25 +42,75 @@
 		</header>
 <!-- First Section -->
 		<section id="home_section" class="section1">
-			<h1>Book an appointment with us!</h1>
-			<form></form>
-			<span>Contact us</span>
-			<form></form>
-
+			<div id="appointment">
+				<form method="post">
+					<h1>Book an appointment with us!</h1>
+					<label>
+						First Name:
+						<input name="" autocomplete="name" />
+					</label><br>
+					<label>
+						Last Name: 
+						<input name ="" autocomplete=""/>
+					</label><br>
+	
+					<label>
+						Type of Service:
+						<select name="Haircut">
+							<option value="MenHaircut">Men's Haircut</option>
+							<option value="WomenHaircut">Women's Haircut</option>
+							<option value="Perm">Perm</option>
+							<option value="Coloring">Coloring</option>
+							<option value="Other">Other</option>
+						</select>
+					</label><br>
+	
+					<input type="submit" value="Check Available Times" onclick="checkBookingTimes()">
+				</form>
+			</div>
+			<div id="slideshowButtons">
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<div id="slideshowTracker">
+					<span class="dot slide1 currentSlide" onclick="setCurrentSlide(0)"></span>
+					<span class="dot slide2" onclick="setCurrentSlide(1)"></span>
+					<span class="dot slide3" onclick="setCurrentSlide(2)"></span>
+				</div>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+		</section>
+<!-- Second Section - Contact Us -->
+		<section id="contactUs">
+			<form method="post">
+				<h2>Contact Us</h2>
+				<form action=”mailto:contact@yourdomain.com” method=”POST” enctype=”text/plain” name=”EmailForm”>
+				<label>Email:
+					<input type="email"><br>
+				</label>
+				<div id="emailInput">
+					<label for="message">Message:</label>
+					<textarea  id="message" name="guestEmail" rows=”200″ cols=”200″ spellcheck="true" placeholder="Type your email message here."></textarea>
+					<input type="submit" value="Send" onclick="sendEmail()">
+				</div>
+			</form>
 		</section>
 
 <!-- Footer -->
 		<footer>
 			<div>
-				<img src="img/icons/facebook.png" alt="Facebook">
-				<img src="img/Icons/instagram.png" alt="Instagram">
-				<img src="img/Icons/linkedin.png" alt="Linkedin">
+				<a href="https://www.facebook.com">
+					<img src="img/icons/facebook.png" alt="Facebook">
+				</a>
+				<a href="https://www.instagram.com">
+					<img src="img/icons/instagram.png" alt="Instagram">
+				</a>
+				<a href="https://www.linkedin.com">
+					<img src="img/Icons/linkedin.png" alt="Linkedin">
+				</a>
 			</div>
 			<p>Created by: Osmond Jian</p>
 		</footer>
 
 
-		<script type="text/javascript" src="js/view.js"></script>
-		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="js/booking.js"></script>
 	</body>
 </html>

@@ -10,7 +10,7 @@
 
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/styleBlog.css">
 	</head>
 	<body>
 <!-- Navigation Bar -->
@@ -19,144 +19,54 @@
 				<h6>Ocean Hair Salon</h6>
 				<ul>
 					<li>
-						<a href="#home_section">Home</a>
+						<a href="index.html#home_section">Home</a>
 					</li>
 					<li>
-						<a href="about.html">About</a>
+						<a href="index.html">About</a>
 					</li>
 					<li>
-						<a href="#services_section">Services</a>
+						<a href="index.html#services_section">Services</a>
 					</li>
 					<li>
-						<a href="#lookbook_section">LookBook</a>
+						<a href="index.html#lookbook_section">LookBook</a>
 					</li>
 					<li>
-						<a href="#news_section">News</a>
+						<a href="#home_section">News</a>
 					</li>
 					<li>
 						<a href="booking.html">Contact</a>
 					</li>
 				</ul>
-				<button class="bookOnline">Book Online</button>
+				<button class="bookOnline" onclick="bookOnline()">Book Online</button>
 			</nav>
 		</header>
 <!-- First Section -->
 		<section id="home_section" class="section1">
-
-			<div class="section1FlexContainer">
-				<h1>BLONDE <br>& HIGHLIGHT</h1>
-				<p>DIVIDE YOUR UNIQUENESS BY YOUR HAIRS IN STYLE</p>
-				<button id="services">Our Services</button>
-				<div class="section1Offer">
-					<h2>Your First Visit?</h2>
-					<p> <b>-20%</b> FOR THE FIRST <br>CLASSIC HAIRCOLORING</p>
-					<button class="bookOnline">Book Online</button>
-				</div>
-			</div>
-
-			<aside>
-				<p>Monday-Sunday 7:00am - 8:00pm</p>
-			</aside>
-
-		</section>
-<!-- Second Section with 3 icon-paragraph pairs -->
-		<section id="services_section" class="section2">
-			<div>
-				<img src="img/Icons/icon-face.png" alt="Icon of Face">
-				<h3>Expert Beauticians</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime placeat debitis aliquid mollitia doloremque, nesciunt maiores quibusdam explicabo natus ipsum labore architecto aliquam doloribus veniam odio sunt exercitationem soluta asperiores! </p>
-			</div>
-			<div>
-				<img src="img/Icons/icon-comb.png" alt="Icon of Comb">
-				<h3>Quality Services</h3>
-				<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Distinctio quo omnis alias harum praesentium excepturi dolores ea iure porro dolore voluptatem labore corrupti exercitationem est officia consequuntur, earum voluptatum vero!</p>
-			</div>
-			<div>
-				<img src="img/Icons/icon-shampoo.png" alt="Icon of Shampoo">
-				<h3>Beauty Products</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro obcaecati atque dolorum asperiores. Quod beatae praesentium repellendus nobis voluptatum a libero quam corporis sint ut ipsa, hic dolorum impedit illum.</p>
-			</div>
-		</section>
-<!-- Third Section - NEWS STORY -->
-		<section id="news_section" class="section3">
-			<div class="whiteBox">
-				<div>
-					<h4>MAKE YOUR <br>OWN MOMENTUM</h4>
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos fugit itaque rerum quam quibusdam, natus non asperiores perferendis, nesciunt commodi totam dolore repellendus atque nam ex voluptate expedita optio ut?</p>
-					<button id="readMore">Read More</button>
-				</div>
-				<div class="blogImage">
-					<img src="img/blog-post-image.png" alt="Picture of man getting haircut">
-				</div>
-			</div>
-		</section>
-<!-- Fourth Section - EMPLOYEES -->
-		<section class="section4">
-			<div class="portrait">
-				<img src="img/Staff/Alita-Willims.jpg" alt="Alita Willims Portrait">
-				<div>
-					<p class="nameTag">Cheryl Yan</p>
-					<p class="role">Colorist</p>
-				</div>
-			</div>
-
-			<div class="portrait">
-				<img src="img/Staff/Ayesha-Lake.jpg" alt="Ayesha Lake Portrait">
-				<div>
-					<p class="nameTag">Ayesha Lake</p>
-					<p class="role">Stylist</p>
-				</div>
-			</div>
-
-			<div class="portrait">
-				<img src="img/Staff/Smith-Michelle.jpg" alt="Smith Michelle Portrait">
-				<div>
-					<p class="nameTag">Alita Willims</p>
-					<p class="role">Beautician</p>
-				</div>
-			</div>
-		</section>
-<!-- Fifth Section - Random Ad -->
-		<section class="section5">
-			<div>
-				<p>Colour Day Offer!</p>
-				<p><b>-10%</b> ON HAIRCUT <br>COLOR AND HIGHLIGHT</p>
-				<button class="bookOnline">Book Appointment</button>
-			</div>
-			<img src="img/ad-banner-hair2.png" alt="Hairstyle Stock Photo">
-		</section>
-<!-- Sixth Section - PhotoBook -->
-		<section id="lookbook_section" class="section6">
-			<h5>OUR LOOKBOOK</h5>
-			<div class="Lookbook">
-				<div class="column1">
-					<img src="img/LookBook/hairstyle1.jpg" alt="Photo1">
-					<img src="img/LookBook/hairstyle3.jpg" alt="Photo2">
-				</div>
-
-				<div class="column2">
-					<img src="img/LookBook/hairstyle4.jpg" alt="Photo3">
-					<img src="img/LookBook/hairstyle6.jpg" alt="Photo4">
-				</div>
-
-				<div class="column3">
-					<img src="img/LookBook/hairstyle2.jpg" alt="Photo5">
-					<img src="img/LookBook/hairstyle5.jpg" alt="Photo6">
-				</div>
+			<div class="blogOuter">
+				<h1>MAKE YOUR OWN MOMENTUM</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim dolorum hic inventore atque velit maiores asperiores nulla quo quaerat laudantium? Exercitationem animi cumque delectus praesentium iste dolor accusamus provident aliquid quibusdam? Beatae incidunt quod voluptas mollitia debitis eaque. Eveniet natus praesentium quisquam tempore mollitia rerum tempora excepturi aperiam minus labore.</p>
+				<img src="img/blog-post-image.png" alt="Man getting haircut">
+				<span>A man getting a haircut at Ocean Hair Salon</span>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero neque nostrum tenetur quo quod, maxime cumque aliquid voluptate adipisci id amet ducimus omnis iusto, repellendus mollitia recusandae. Ipsa, similique doloremque.</p>
 			</div>
 		</section>
 <!-- Footer -->
 		<footer>
 			<div>
-				<img src="img/icons/facebook.png" alt="Facebook">
-				<img src="img/Icons/instagram.png" alt="Instagram">
-				<img src="img/Icons/linkedin.png" alt="Linkedin">
+				<a href="https://www.facebook.com">
+					<img src="img/icons/facebook.png" alt="Facebook">
+				</a>
+				<a href="https://www.instagram.com">
+					<img src="img/icons/instagram.png" alt="Instagram">
+				</a>
+				<a href="https://www.linkedin.com">
+					<img src="img/Icons/linkedin.png" alt="Linkedin">
+				</a>
 			</div>
 			<p>Created by: Osmond Jian</p>
 		</footer>
 
 
-		<script type="text/javascript" src="js/view.js"></script>
-		<script type="text/javascript" src="js/controller.js"></script>
+		<script type="text/javascript" src="js/blog.js"></script>
 	</body>
 </html>

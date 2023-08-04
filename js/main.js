@@ -4,10 +4,8 @@ document.body.querySelector('#readMore').addEventListener('click', () => service
 
 const bookOnline = document.querySelectorAll(".bookOnline");
 const eventListenerOnBookOnlineButton = function () {
-    console.log('test')
     Array.from(bookOnline).forEach((element) => {
         element.addEventListener('click', () => servicesButton('../booking.html'));
-        console.log(element+'has event listener added');
     })
 }
 eventListenerOnBookOnlineButton();
@@ -26,6 +24,8 @@ function servicesButton (button) {
 //Slideshow javascript
 
 
+//set up a counter to keep track of what slide we are on
+let currentSlideArrayIndex = 0;
 
 //Array containing location of slideshow pictures and the css for a matching color gradient
 const slideshowSalonBackground = [
@@ -45,18 +45,16 @@ const slideshowSalonBackground = [
     }
     ];
 
-//set up a counter to keep track of what slide we are on
-let currentSlide = 0;
 
 //this variable is just to grab all the elements that need the color gradient change
 const slideshowMatch = document.body.querySelectorAll('.slideshowMatch');
 
 //manage possible currentSlide counter overflow (less than 0 or more than array length)
 function manageOverflow () {
-    if (currentSlide === slideshowSalonBackground.length){
-        currentSlide = 0;
-    } else if (currentSlide < 0) {
-        currentSlide = (slideshowSalonBackground.length - 1);
+    if (currentSlideArrayIndex === slideshowSalonBackground.length){
+        currentSlideArrayIndex = 0;
+    } else if (currentSlideArrayIndex < 0) {
+        currentSlideArrayIndex = (slideshowSalonBackground.length - 1);
     } else {
         return;
     }
@@ -64,37 +62,36 @@ function manageOverflow () {
 
 //This function fires when the left/right arrow keys are used to navigate the slideshow
 function plusSlides (num) {
-    //increase currentSlide counter    
-    currentSlide = currentSlide + num;
+    //increase currentSlideArrayIndex counter    
+    currentSlideArrayIndex = currentSlideArrayIndex + num;
     manageOverflow();
-    currentSlideStorage(currentSlide);
+    currentSlideStorage(currentSlideArrayIndex);
 
     //change background image of home section element
-    document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlide)].backgroundImage;
+    document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlideArrayIndex)].backgroundImage;
 
     //change background color for elements with the class .slideshowMatch for color matching
     slideshowMatch.forEach((element) => {
-        element.style.background= slideshowSalonBackground[(currentSlide)].backgroundColor;
+        element.style.background= slideshowSalonBackground[(currentSlideArrayIndex)].backgroundColor;
     });
-    addCurrentclassClassList((currentSlide+1));
+    addCurrentclassClassList((currentSlideArrayIndex));
 }
 
 //This function fires when the catalogue dots are used to navigate the slideshow
 function setCurrentSlide (num) {
-    currentSlide = num -1;
-    currentSlideStorage(currentSlide);
-    document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlide)].backgroundImage;
+    currentSlideArrayIndex = num;
+    currentSlideStorage(currentSlideArrayIndex);
+    document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlideArrayIndex)].backgroundImage;
     slideshowMatch.forEach((element) => {
-        element.style.background= slideshowSalonBackground[(currentSlide)].backgroundColor;
+        element.style.background= slideshowSalonBackground[(currentSlideArrayIndex)].backgroundColor;
     });
     addCurrentclassClassList(num);
 }
 
 //This function adds and removes the "currentSlide" class onto the correct elements for the slideshow
-function addCurrentclassClassList (num) {
-    console.log(num);
+function addCurrentclassClassList (currentSlideArrayIndex) {
     document.body.querySelector('.currentSlide').classList.remove("currentSlide");
-    document.body.querySelector(`.slide${num}`).classList.add("currentSlide");
+    document.body.querySelector(`.slide${Number(currentSlideArrayIndex) + 1}`).classList.add("currentSlide");
 
 }
 
@@ -102,15 +99,15 @@ function addCurrentclassClassList (num) {
 function currentSlideStorage (num) {
     if (!localStorage.getItem("currentSlide")) {
         localStorage.setItem("currentSlide", 0);
-    } else if (!num) {
+    } else if (num === "onLoad") {
         const previousSessionCurrentSlide = localStorage.getItem("currentSlide");
-        currentSlide = Number(previousSessionCurrentSlide);
+        currentSlideArrayIndex = Number(previousSessionCurrentSlide);
         //probably a way to refactor to combine this and setCurrentSlide
-        document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlide)].backgroundImage;
+        document.body.querySelector('#home_section').style.backgroundImage = slideshowSalonBackground[(currentSlideArrayIndex)].backgroundImage;
         slideshowMatch.forEach((element) => {
-            element.style.background= slideshowSalonBackground[(currentSlide)].backgroundColor;
+            element.style.background= slideshowSalonBackground[(currentSlideArrayIndex)].backgroundColor;
         });
-        addCurrentclassClassList((currentSlide + 1));
+        addCurrentclassClassList((currentSlideArrayIndex));
     } else {
         localStorage.setItem("currentSlide", num);
     }
@@ -133,15 +130,8 @@ function toggleEnlargeImage (img) {
     }
 }
 
-
-
-
-
-
-
-
-
+//javascript for booking.html page
 
 
 //onload functions
-currentSlideStorage();
+currentSlideStorage("onLoad");
