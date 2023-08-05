@@ -48,6 +48,10 @@ textarea {
   background-color:grey !important;
 }
 
+.hamburgerMenu {
+  display:none;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -241,3 +245,84 @@ footer div a img {
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+@media (max-width:820px){
+  /* Nav */
+    nav {
+      display:flex;
+      position:relative;
+      justify-content:space-evenly;
+    }
+  
+    nav > ul {
+      display:none;
+      position:absolute;
+      bottom:0;
+      left:0;
+      z-index:99;
+    }
+  
+    ul li{
+      display:block;
+      width:100%;
+  
+    }
+  
+    nav .bookOnline{
+      display:none;
+    }
+  
+    .hamburgerMenu{
+      display:block;
+      position:relative;
+      z-index:99;
+    }
+  
+    .hamburgerMenu ul {
+      display:none;
+      position:absolute;
+      top:100;
+      right:0;
+    }
+  
+    .hamburger {
+      display:block;
+      width:100px;
+      height:100%;
+      padding:5%;
+      margin-right:5%;
+    }
+  
+    .hamburger:hover {
+      border:solid;
+    }
+
+    textarea{
+      border:solid;
+    }
+
+    .section1 {
+      width:100%;
+      padding:10%;
+      margin:auto;
+    }
+
+    #slideshowButtons {
+      margin-right:5%;
+    }
+  }
+  
+  @media (max-width:450px){
+    h1{
+      font-size:150%;
+    }
+
+    #appointment input{
+      width:80%;
+      font-size:70%;
+    }
+
+    #slideshowButtons {
+      margin-right:15%;
+    }
+
+  }
